@@ -37,6 +37,7 @@ int main(int argc, const char * argv[]) {
              //temp = summon;
            }
              do{ 
+               if(mons.get_count() == 1) break;
                if(mons.is_everymons_die()) {
                     everymons_die_dis();
                     goto out;
@@ -159,7 +160,7 @@ int main(int argc, const char * argv[]) {
                         break;
                     } 
 
-              }while(count > 0 && mons.get_count() < 1);
+              }while(count > 0 && mons.get_count() != 1);
               // boss appeared
                  boss = new BOSS(); 
                  mons.add_boss(); 
